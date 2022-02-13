@@ -1,15 +1,10 @@
 body {
+  margin: 0;
+  height: 100vh;
   background-color: #d6e2f0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   font-family: "Outfit", sans-serif;
 }
 
@@ -18,7 +13,6 @@ p {
 }
 
 article {
-  margin-top: 3rem;
   width: 275px;
   padding: 1rem;
   background-color: white;

@@ -1,4 +1,4 @@
-# frontend-mentor-solutions (COMING SOON)
-Solutions to some Frontend Mentor challenges
+# Frontend Mentor Solutions
+Solutions to Frontend Mentor challenges
 
-- [QR Code Component](https://deepak-parmar.github.io/frontend-mentor-solutions/qr-code-component)
+- <a href="https://deepak-parmar.github.io/frontend-mentor-solutions/qr-code-component" target="_blank">QR Code Component</a>

@@ -8,13 +8,17 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
-p {font-size: 15px;}
+p {
+  font-size: 15px;
+}
 
 article {
   width: 270px;
   padding: .9rem;
   background-color: white;
   border-radius: 1rem;
+  -webkit-box-shadow: 0 20px 13px rgba(0, 0, 0, 0.03);
+          box-shadow: 0 20px 13px rgba(0, 0, 0, 0.03);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,9 +31,13 @@ article {
           align-items: center;
 }
 
-article figure {margin: 0 0 0 0;}
+article figure {
+  margin: 0 0 0 0;
+}
 
-article figure img {border-radius: .5rem;}
+article figure img {
+  border-radius: .5rem;
+}
 
 article figure figcaption {
   padding: 0 .9rem 0 .9rem;
@@ -41,5 +49,7 @@ article figure figcaption h2 {
   color: #1f3251;
 }
 
-article figure figcaption p {color: #7b879d;}
+article figure figcaption p {
+  color: #7b879d;
+}
 /*# sourceMappingURL=style.css.map */

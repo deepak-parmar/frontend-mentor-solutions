@@ -1,3 +1,5 @@
+<img style="float: left;" src="favicon-32x32.png">
+
 # Frontend Mentor Solutions
 Solutions to Frontend Mentor challenges
 

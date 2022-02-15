@@ -1,3 +1,5 @@
+<style>body {background-color: #111;}</style>
+
 ![Frontend Mentor Icon](favicon-32x32.png)
 # Frontend Mentor Solutions
 Solutions to Frontend Mentor challenges

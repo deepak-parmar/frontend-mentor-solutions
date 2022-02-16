@@ -14,15 +14,17 @@
     p {font-size: 18px;}
   </style>
 </head>
-<body class="h-screen bg-[#0d192b] flex justify-center items-center">
+<body class="lg:h-screen bg-[#0d192b] flex justify-center items-center">
   <main>
-    <article class="bg-[#14253d] p-5 rounded-lg shadow-lg flex flex-col" style="width: 360px;">
-      <figure class="relative group">  
-        <img class="rounded-lg" src="images/image-equilibrium.jpg" width=320 height=320 alt="equilibrium preview image" />
-        
-        <a href="#" class="absolute top-0 bg-[#00fff7]/50 place-items-center rounded-lg hidden group-hover:grid" style="width: 320px; height: 320px;">
-          <img src="images/icon-view.svg" width=48 height=48 alt="preview image button" />
-        </a>
+    <article class="bg-[#14253d] p-5 m-5 my-12 lg:m-0 rounded-lg shadow-lg flex flex-col" style="min-width: 280px; max-width: 360px;">
+      <figure class="group">  
+        <div class="relative">
+          <img class="rounded-lg" src="images/image-equilibrium.jpg" width=320 height=320 alt="equilibrium preview image" />
+          
+          <a href="#" class="absolute top-0 w-full h-full bg-[#00fff7]/50 place-items-center rounded-lg hidden group-hover:grid">
+            <img src="images/icon-view.svg" width=48 height=48 alt="preview image button" />
+          </a>
+        </div>
 
         <figcaption>
           <h1 class="text-white text-xl antialiased font-bold py-4 hover:text-[#00fff7]"><a href="#">Equilibrium #3429</a></h1>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <title>Tip Calculator App | Frontend Mentor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/build.css">
+  <style>
+    * {font-family: 'Space Mono', monospace;}
+  </style>
+</head>
+<body class="bg-[#c5e4e7] lg:h-screen grid place-items-center place-content-center">
+  
+  <header class="m-5">
+    <img src="images/logo.svg" width=87 height=54 alt="Splitter logo" />
+  </header>
+  <main class="bg-white p-6 rounded-2xl flex justify-between">
+    <div class="pr-7 py-2 w-[300px] h-[300px] flex flex-col justify-between">
+
+      <div class="relative w-full flex flex-col">
+        <label class="text-sm text-[#7f9c9f] font-bold" for="bill">Bill</label>
+        <input class="text-2xl w-full text-black bg-[#f4fafa] text-right font-bold leading-none p-1 rounded-lg" type="number" name="bill" id="bill" style="min-width: 272px;" />
+        <img class="absolute bottom-0 left-0 m-3 pointer-events-none	" src="images/icon-dollar.svg" alt="" />
+      </div>
+
+      <div class="flex flex-col w-full">
+        <label class="text-sm text-[#7f9c9f] font-bold">Select Tip %</label>
+        <input class="hidden" type="radio" name="tipPercentage" id="tipPercentage5" value=5 />
+        <input class="hidden" type="radio" name="tipPercentage" id="tipPercentage10" value=10 />
+        <input class="hidden" type="radio" name="tipPercentage" id="tipPercentage15" value=15 />
+        <input class="hidden" type="radio" name="tipPercentage" id="tipPercentage25" value=25 />
+        <input class="hidden" type="radio" name="tipPercentage" id="tipPercentage50" value=50 />
+        <input class="hidden" type="radio" name="tipPercentage" id="tipPercentageCustom" value=custom />
+        
+        <div class="grid grid-cols-3 gap-2 text-center">
+          <label class="bg-[#00474b] text-white font-bold py-1 px-6 rounded-sm" for="tipPercentage5">5%</label>
+        <label class="bg-[#00474b] text-white font-bold py-1 px-6 rounded-sm" for="tipPercentage10">10%</label>
+        <label class="bg-[#00474b] text-white font-bold py-1 px-6 rounded-sm" for="tipPercentage15">15%</label>
+        <label class="bg-[#00474b] text-white font-bold py-1 px-6 rounded-sm" for="tipPercentage25">25%</label>
+        <label class="bg-[#00474b] text-white font-bold py-1 px-6 rounded-sm" for="tipPercentage50">50%</label>
+        <label class="grid grid-cols-1" for="tipPercentageCustom">
+          <input class="p-1 rounded-sm" type="number" name="tipPercentageCustom" placeholder="Custom" />
+        </label>
+        </div>
+      </div>
+
+      <div class="relative w-full flex flex-col">
+        <label class="text-sm text-[#7f9c9f] font-bold" for="bill">Number of People</label>
+        <input class="text-2xl text-black bg-[#f4fafa] text-right font-bold leading-none p-1 rounded-lg" type="number" name="bill" id="bill" style="min-width: 272px;" />
+        <img class="absolute bottom-0 left-0 m-3 pointer-events-none	" src="images/icon-person.svg" alt="" />
+      </div>
+    </div>
+
+    <div class="bg-[#00474b] w-[300px] rounded-2xl p-8 flex flex-col justify-between">
+      <div class="flex justify-between items-center my-4 mt-0">
+        <div>
+          <small class="block font-bold text-white">Tip Amount</small>
+          <small class="block text-sm">/ Person</small>
+        </div>
+        <p class="text-3xl font-bold">$0.00</p>
+      </div>
+      <div class="flex justify-between items-center mt-4 mb-20">
+        <div>
+          <small class="block font-bold text-white">Tip Amount</small>
+          <small class="block text-sm">/ Person</small>
+        </div>
+        <p class="text-3xl font-bold">$0.00</p>
+      </div>
+      <button class="bg-[#0d686d] p-1 rounded-md">RESET</button>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "frontend-mentor-solutions",
+  "private": true,
+  "version": "1.0.0",
+  "main": "README.md",
+  "scripts": {
+    "watch-css": "npx tailwindcss -o css/build.css --minify --watch"
+  },
+  "author": "Deepak Parmar",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.22"
+  }
+}

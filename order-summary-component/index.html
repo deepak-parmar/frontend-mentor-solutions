@@ -2,36 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <title>Order Summary Card | Frontend Mentor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/build.css">
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {font-family: 'Red Hat Display', sans-serif;}
+    
+    body {
+      background: url(images/pattern-background-desktop.svg) no-repeat;
+    }
+    
+    @media screen and (max-width: 375px) {
+      body {
+        background: url(images/pattern-background-mobile.svg) no-repeat;
+      }
+    }
   </style>
 </head>
-<body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body class="lg:h-screen bg-[#e0e8ff] flex justify-center items-center">
+  <main class="bg-white overflow-hidden rounded-xl max-w-[420px] shadow-xl m-6 lg:my-0 my-20">
+    <img src="images/illustration-hero.svg" alt="">
+    <section class="text-center flex flex-col p-8 pb-4 lg:p-11 lg:pb-8">
+      <h1 class="text-2xl text-[#1f2f56] font-black">Order Summary</h1>
+      <p class="text-[#7280a7] my-4">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      <div class="bg-[#f5f7ff] flex justify-between items-center rounded-lg p-6 mb-7">
+        <img src="images/icon-music.svg" alt="">
+        <div class="flex flex-col items-start w-full pl-4">
+          <p class="text-[#1f2f56] font-black">Annual Plan</p>
+          <p class="text-[#7280a7]">$59.99/year</p>
+        </div>
+        <a class="text-[#3829e0] hover:text-[#7280a7] underline font-semibold" href="#"><small>Change</small></a>
+      </div>
+      <a href="#" class="text-white text-sm font-semibold bg-[#3829e0] hover:bg-[#7280a7] p-3 rounded-lg shadow-xl mb-4">Proceed to Payment</a>
+      <a href="#" class="text-[#7280a7] hover:text-[#1f2f56] text-sm font-semibold p-3 rounded-lg">Cancel Order</a>
+    </section>
+  </main>
 </body>
 </html>

@@ -9,20 +9,49 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/build.css">
+  <style>
+    * {font-family: "Josefin Sans", sans-serif;}
+    .hero {
+      background: url(images/hero-desktop.jpg) no-repeat;
+      background-size: cover;
+    }
+    .hero-mobile {
+      display: none;
+      height: 250px;
+      background: url(images/hero-mobile.jpg) no-repeat;
+      background-size: cover;
+    }
+    @media screen and (max-width: 375px) {
+      .hero {display: none;}
+      .hero-mobile {display: block;}
+    }
+    .cls {
+      color: #ce9797;
+      color: #f96262;
+      color: #413a3a;
+    }
+  </style>
 </head>
-<body>
-  <main>
-    <div>
-      <header><img src="images/logo.svg" alt="Base Apparel Logo"></header>
-      <section>
-        <h1>We're coming soon</h1>
-        <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <form>
-          <input type="email" name="" id="" placeholder="Email Address">
-          <button type="submit"></button>
+<body class="lg:h-screen">
+  <main class="h-full grid grid-rows-[auto_auto] lg:grid-rows-1 grid-cols-1 lg:grid-cols-[auto_610px]" style="grid-auto-flow: dense;">
+    <div class="lg:px-36 lg:py-16">
+      <header class="p-10 lg:p-0"><img src="images/logo.svg" alt="Base Apparel Logo"></header>
+      <div class="hero-mobile"></div>
+      <section class="m-4 my-14 lg:m-0 lg:mt-32 text-center lg:text-left">
+        <h1 class="text-4xl lg:text-6xl uppercase tracking-[1rem]">
+          <span class="text-[#ce9797] font-thin block">We're</span>
+          <span class="text-[#413a3a] font-semibold">coming<br/>soon</span>
+        </h1>
+        <p class="text-[#ce9797] my-6">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        <form class="w-full flex">
+          <input class="w-full p-3.5 indent-4 rounded-full border border-[#ce9797]" type="email" name="" id="" placeholder="Email Address">
+          <button class="p-3 bg-rose-800 rounded-full" type="submit">
+            <img src="images/icon-arrow.svg" alt="">
+          </button>
         </form>
       </section>
     </div>
+    <div class="hero"></div>
   </main>
 </body>
 </html>

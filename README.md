@@ -10,4 +10,4 @@ Solutions to Frontend Mentor challenges
 6. [Advice Generator App](https://advice-generator.herokuapp.com)
 7. [Four Card Feature Section](https://deepak-parmar.github.io/frontend-mentor-solutions/four-card-feature-section)
 8. [Order Summary Component](https://deepak-parmar.github.io/frontend-mentor-solutions/order-summary-component)
-8. [Interactive Rating Component](https://deepak-parmar.github.io/frontend-mentor-solutions/interactive-rating-component/public)
+9. [Interactive Rating Component](https://deepak-parmar.github.io/frontend-mentor-solutions/interactive-rating-component/public)

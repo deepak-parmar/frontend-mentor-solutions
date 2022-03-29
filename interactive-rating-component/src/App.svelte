@@ -6,13 +6,15 @@
 	$: finalRating = null;
 </script>
 
-{#if finalRating != null}
-	<ThankYouComponent {totalRating} {finalRating} />
-{:else}
-	<RatingComponent
-		{totalRating}
-		on:submit={(event) => {
-			finalRating = event.detail;
-		}}
-	/>
-{/if}
+<main>
+	{#if finalRating != null}
+		<ThankYouComponent {totalRating} {finalRating} />
+	{:else}
+		<RatingComponent
+			{totalRating}
+			on:submit={(event) => {
+				finalRating = event.detail;
+			}}
+		/>
+	{/if}
+</main>

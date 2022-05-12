@@ -78,6 +78,7 @@
   .radio label {
     line-height: 0;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     color: var(--mediumGrey);
@@ -101,6 +102,7 @@
 
   button[type="submit"] {
     width: 100%;
+    cursor: pointer;
     padding: 1.4rem;
     color: white;
     letter-spacing: 2px;

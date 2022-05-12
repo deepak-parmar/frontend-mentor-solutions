@@ -8,7 +8,10 @@
   color: white;
 }
 
-* { font-family: 'Overpass', sans-serif; }
+* {
+  font-family: "Overpass", sans-serif;
+  font-display: swap;
+}
 
 p {
   margin: 0;
@@ -42,18 +45,22 @@ body {
   margin: 1.5rem;
 }
 
-br { display: none }
-
-
+br {
+  display: none;
+}
 
 /* Large Screens */
 @media (min-width: 1024px) {
-  body { height: 100vh }
-  
+  body {
+    height: 100vh;
+  }
+
   .wrapper {
     padding: 2.2rem;
     margin: 0;
   }
-  
-  br { display: block }
+
+  br {
+    display: block;
+  }
 }

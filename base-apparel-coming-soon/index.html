@@ -9,37 +9,30 @@
       sizes="32x32"
       href="../favicon-32x32.png"
     />
+
     <title>Base Apparel Coming Soon Page | Frontend Mentor</title>
+
+    <link rel="stylesheet" href="../css/build.css" />
+
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      as="style"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/build.css" />
     <style>
       * {
         font-family: "Josefin Sans", sans-serif;
       }
-      .cls {
-        color: #ce9797;
-        color: #f96262;
-        color: #413a3a;
-
-        /* from */
-        /* color:#ffffff; */
-        /* to */
-        /* color: #fff5f5; */
-        /* - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
-
-        /* from */
-        /* color: #f8bfbf; */
-        /* to */
-        /* color: #ee8c8c */
-      }
 
       body {
-        background-image: url(images/bg-pattern-desktop.svg),
+        background-image: url(./images/bg-pattern-desktop.svg),
           linear-gradient(135deg, #fff, #fff5f5);
       }
 
@@ -53,14 +46,15 @@
     </style>
   </head>
   <body>
-    <main class="flex justify-between">
+    <main class="flex justify-between mb-10 lg:mb-0">
       <div class="lg:px-44 py-0 flex flex-col">
-        <header class="py-16">
+        <!-- logo -->
+        <header class="pl-8 py-10 lg:pl-0 lg:py-16">
           <img src="images/logo.svg" alt="Base Apparel Logo" />
         </header>
 
         <!-- mobile hero image -->
-        <img class="block lg:hidden" src="images/hero-mobile.jpg" alt="" />
+        <img class="block lg:hidden" src="./images/hero-mobile.jpg" alt="" />
 
         <section class="m-4 my-14 lg:m-0 lg:mt-16 text-center lg:text-left">
           <h1 class="text-4xl lg:text-6xl uppercase tracking-[1rem]">
@@ -74,26 +68,35 @@
             and our launch deals.
           </p>
 
-          <form class="w-full flex relative mt-10">
+          <form id="subscriptionForm" class="group w-full flex relative mt-10">
+            <!-- email input -->
             <input
               type="email"
-              class="w-full p-3.5 indent-4 rounded-full border border-[#ce9797] outline outline-2 outline-transparent hover:outline-[#f96262]"
+              id="emailInput"
+              class="w-full p-3.5 indent-4 rounded-full border border-[#ce9797] 
+              outline outline-2 outline-transparent hover:outline-[#f96262]"
               placeholder="Email Address"
               required
             />
-            <img
-              class="hidden absolute right-[22%] py-4"
-              src="./images/icon-error.svg"
-              alt=""
-            />
+
             <button
-              class="absolute text-[#413a3a] right-0 p-[1.05rem] px-10 rounded-full shadow-lg transition-colors hover:shadow-2xl hover:bg-[#f9cecf]"
+              class="absolute text-[#413a3a] right-0 p-[1.05rem] px-10 rounded-full 
+              shadow-lg transition-colors hover:shadow-2xl hover:bg-[#f9cecf]"
               type="submit"
             >
-              <img src="images/icon-arrow.svg" alt="" />
+              <!-- error icon -->
+              <img
+                id="iconError"
+                class="hidden absolute left-0 -ml-10 pointer-events-none"
+                src="./images/icon-error.svg"
+                alt=""
+              />
+
+              <!-- arrow icon -->
+              <img src="./images/icon-arrow.svg" alt="" />
             </button>
           </form>
-          <p class="hidden text-[#f96262] my-1 ml-8">
+          <p id="msgError" class="hidden text-[#f96262] text-left my-1 ml-8">
             <small>Pease provide a valid email</small>
           </p>
         </section>
@@ -106,5 +109,31 @@
         alt=""
       />
     </main>
+
+    <script>
+      // prevent submission of form
+      document
+        .getElementById("subscriptionForm")
+        .addEventListener("submit", (event) => {
+          event.preventDefault();
+        });
+
+      const emailInput = document.getElementById("emailInput");
+      const iconError = document.getElementById("iconError");
+      const msgError = document.getElementById("msgError");
+
+      // hide error icon and message on change
+      emailInput.addEventListener("keyup", () => {
+        iconError.classList.add("hidden");
+        msgError.classList.add("hidden");
+      });
+
+      // display error icon and message when email is invalid
+      emailInput.addEventListener("invalid", (event) => {
+        event.preventDefault();
+        iconError.classList.remove("hidden");
+        msgError.classList.remove("hidden");
+      });
+    </script>
   </body>
 </html>

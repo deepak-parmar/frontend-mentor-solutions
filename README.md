@@ -11,3 +11,4 @@ Solutions to Frontend Mentor challenges
 7. [Four Card Feature Section](https://deepak-parmar.github.io/frontend-mentor-solutions/four-card-feature-section)
 8. [Order Summary Component](https://deepak-parmar.github.io/frontend-mentor-solutions/order-summary-component)
 9. [Interactive Rating Component](https://deepak-parmar.github.io/frontend-mentor-solutions/interactive-rating-component/public)
+10. [Base Apparel Coming Soon](https://deepak-parmar.github.io/frontend-mentor-solutions/base-apparel-coming-soon)

@@ -1,50 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-  <title>Base Apparel Coming Soon Page | Frontend Mentor</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/build.css">
-  <style>
-    * {font-family: "Josefin Sans", sans-serif;}
-    .cls {
-      color: #ce9797;
-      color: #f96262;
-      color: #413a3a;
-    }
-  </style>
-</head>
-<body class="lg:h-screen">
-  <main class="h-full grid grid-rows-[auto_auto] lg:grid-rows-1 grid-cols-1 lg:grid-cols-[auto_610px]" style="grid-auto-flow: dense;">
-    <!-- <main class="h-full flex "></main> -->
-    <div class="lg:px-36 lg:py-16">
-      <header class="p-10 lg:p-0"><img src="images/logo.svg" alt="Base Apparel Logo"></header>
-      
-      <!-- mobile hero image -->
-      <img class="block lg:hidden" src="images/hero-mobile.jpg" alt="">
-      
-      <section class="m-4 my-14 lg:m-0 lg:mt-32 text-center lg:text-left">
-        <h1 class="text-4xl lg:text-6xl uppercase tracking-[1rem]">
-          <span class="text-[#ce9797] font-thin block">We're</span>
-          <span class="text-[#413a3a] font-semibold">coming<br/>soon</span>
-        </h1>
-        <p class="text-[#ce9797] my-6">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        
-        <form class="w-full flex">
-          <input class="w-full p-3.5 indent-4 rounded-full border border-[#ce9797]" placeholder="Email Address">
-          <button class="p-3 bg-rose-800 rounded-full" type="submit">
-            <img src="images/icon-arrow.svg" alt="">
-          </button>
-        </form>
-      </section>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <title>Base Apparel Coming Soon Page | Frontend Mentor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/build.css" />
+    <style>
+      * {
+        font-family: "Josefin Sans", sans-serif;
+      }
+      .cls {
+        color: #ce9797;
+        color: #f96262;
+        color: #413a3a;
 
-    <!-- desktop hero image -->
-    <img class="hidden lg:block" src="images/hero-desktop.jpg" alt="">
-  </main>
-</body>
+        /* from */
+        /* color:#ffffff; */
+        /* to */
+        /* color: #fff5f5; */
+        /* - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+
+        /* from */
+        /* color: #f8bfbf; */
+        /* to */
+        /* color: #ee8c8c */
+      }
+
+      body {
+        background-image: url(images/bg-pattern-desktop.svg),
+          linear-gradient(135deg, #fff, #fff5f5);
+      }
+
+      button[type="submit"] {
+        background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+      }
+
+      button[type="submit"]:hover {
+        background-image: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="flex justify-between">
+      <div class="lg:px-44 py-0 flex flex-col">
+        <header class="py-16">
+          <img src="images/logo.svg" alt="Base Apparel Logo" />
+        </header>
+
+        <!-- mobile hero image -->
+        <img class="block lg:hidden" src="images/hero-mobile.jpg" alt="" />
+
+        <section class="m-4 my-14 lg:m-0 lg:mt-16 text-center lg:text-left">
+          <h1 class="text-4xl lg:text-6xl uppercase tracking-[1rem]">
+            <span class="text-[#ce9797] font-thin block">We're</span>
+            <span class="text-[#413a3a] font-semibold">coming<br />soon</span>
+          </h1>
+
+          <p class="text-[#ce9797] my-6">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+
+          <form class="w-full flex relative mt-10">
+            <input
+              type="email"
+              class="w-full p-3.5 indent-4 rounded-full border border-[#ce9797] outline outline-2 outline-transparent hover:outline-[#f96262]"
+              placeholder="Email Address"
+              required
+            />
+            <img
+              class="hidden absolute right-[22%] py-4"
+              src="./images/icon-error.svg"
+              alt=""
+            />
+            <button
+              class="absolute text-[#413a3a] right-0 p-[1.05rem] px-10 rounded-full shadow-lg transition-colors hover:shadow-2xl hover:bg-[#f9cecf]"
+              type="submit"
+            >
+              <img src="images/icon-arrow.svg" alt="" />
+            </button>
+          </form>
+          <p class="hidden text-[#f96262] my-1 ml-8">
+            <small>Pease provide a valid email</small>
+          </p>
+        </section>
+      </div>
+
+      <!-- desktop hero image -->
+      <img
+        class="hidden lg:block h-screen"
+        src="images/hero-desktop.jpg"
+        alt=""
+      />
+    </main>
+  </body>
 </html>
